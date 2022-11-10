@@ -1,0 +1,85 @@
+/* ------------- hero------------- */
+
+.section1 {
+	padding: 0rem 1rem;
+}
+
+.swiper {
+	width: 100%;
+	height: 490px;
+	max-width: 1020px;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.divider {
+	width: 60%;
+	height: 1px;
+	background-color: grey;
+	margin: 10px auto;
+}
+
+/* ---------------------- hero -------------------- */
+
+.data-hero {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	gap: 30px;
+	margin-top: 50px;
+	z-index: -10;
+	flex-wrap: wrap;
+}
+
+.data {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 300px;
+}
+
+.data:nth-child(2) {
+	border-left: 1px solid #ececec;
+	border-right: 1px solid #ececec;
+}
+
+.data i {
+	border: 1px solid black;
+	border-radius: 50%;
+	padding: 25px 25px;
+	font-size: 40px;
+	transition: all 0.5s linear;
+	margin-bottom: 15px;
+}
+
+.data i:hover {
+	background-color: var(--navbar-up);
+	transition: all 0.5s linear;
+}
+
+.data h3 {
+	margin-bottom: 10px;
+}
+
+.data p {
+	text-align: center;
+}
