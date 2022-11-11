@@ -1,9 +1,22 @@
+.categories-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.category {
+	cursor: pointer;
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #17adc6;
+}
+
 .card-container {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
-	gap: 50px;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .card {
@@ -14,15 +27,32 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 30px;
+	gap: 10px;
 	background-color: #17adc6;
 	color: white;
 }
 
 .card-img img {
 	width: 250px;
+	height: 200px;
 }
 
 .card-data p {
 	font-size: 14px;
+}
+
+.btn-ver-mas {
+	width: 300px;
+	height: 50px;
+	background-color: #17adc6;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.activo {
+	background-color: green;
 }

@@ -8,6 +8,7 @@ const insumos = [
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
+		stock: 54,
 	},
 	{
 		id: 2,
@@ -17,6 +18,7 @@ const insumos = [
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
+		stock: 54,
 	},
 	{
 		id: 3,
@@ -26,6 +28,7 @@ const insumos = [
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
+		stock: 54,
 	},
 	{
 		id: 4,
@@ -35,6 +38,7 @@ const insumos = [
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
+		stock: 65,
 	},
 	{
 		id: 5,
@@ -44,6 +48,7 @@ const insumos = [
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
+		stock: 54,
 	},
 	{
 		id: 6,
@@ -53,6 +58,7 @@ const insumos = [
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
+		stock: 56,
 	},
 	{
 		id: 7,
@@ -62,6 +68,7 @@ const insumos = [
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
+		stock: 12,
 	},
 	// maquinas //
 	{
@@ -72,6 +79,7 @@ const insumos = [
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://aprenderatatuar.b-cdn.net/wp-content/uploads/2021/05/Solong-Maquina-tatuar-inalambrica-1001x1024.jpg',
+		stock: 41,
 	},
 	{
 		id: 9,
@@ -81,6 +89,7 @@ const insumos = [
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://ae01.alicdn.com/kf/HTB1RhsqMXXXXXXlXXXXq6xXFXXXX/Rotario-sigilo-m-quina-de-tatuaje-de-aluminio-giratorio-potente-y-constante-para-sombreador-y-delineador.jpg',
+		stock: 41,
 	},
 	{
 		id: 10,
@@ -90,6 +99,7 @@ const insumos = [
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://cosasdetattoos.com/wp-content/uploads/2019/07/cheyenne-thunder.jpg',
+		stock: 545,
 	},
 	{
 		id: 11,
@@ -99,6 +109,7 @@ const insumos = [
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://images.squarespace-cdn.com/content/v1/5e2db6ff90968a1bd350e49e/1628200166744-3P84Y315SGZXOA2WHF7D/Untitled.png',
+		stock: 4,
 	},
 	// pigmentos //
 	{
@@ -109,6 +120,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_692217-MLA49655483652_042022-O.jpg',
+		stock: 45,
 	},
 	{
 		id: 13,
@@ -118,6 +130,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://i0.wp.com/nubo.com.ve/icemanink/wp-content/uploads/sites/4/2019/04/tintas-uv.jpg',
+		stock: 84,
 	},
 	{
 		id: 14,
@@ -127,6 +140,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
+		stock: 54,
 	},
 	{
 		id: 15,
@@ -136,6 +150,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
+		stock: 545,
 	},
 	{
 		id: 16,
@@ -145,6 +160,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
+		stock: 6,
 	},
 	{
 		id: 17,
@@ -154,6 +170,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
+		stock: 11,
 	},
 	{
 		id: 18,
@@ -163,6 +180,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
+		stock: 54,
 	},
 	{
 		id: 19,
@@ -172,6 +190,7 @@ const insumos = [
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
+		stock: 555,
 	},
 
 	// higiene //
@@ -183,6 +202,7 @@ const insumos = [
 		price: 3000,
 		category: 'higiene',
 		img: 'https://halconsupplies.com.ar/wp-content/uploads/2021/08/Crema-post-tattoo-black-lion.jpg',
+		stock: 85,
 	},
 	{
 		id: 21,
@@ -192,6 +212,7 @@ const insumos = [
 		price: 3000,
 		category: 'higiene',
 		img: '/assets/img/productos/locion-post-piercing.jpg',
+		stock: 20,
 	},
 
 	//fuentes//
@@ -203,6 +224,7 @@ const insumos = [
 		price: 3000,
 		category: 'fuentes',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_606518-MLA40996773642_032020-O.jpg',
+		stock: 0,
 	},
 	{
 		id: 23,
@@ -212,6 +234,7 @@ const insumos = [
 		price: 3000,
 		category: 'fuentes',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_606518-MLA40996773642_032020-O.jpg',
+		stock: 0,
 	},
 	{
 		id: 24,
@@ -221,6 +244,7 @@ const insumos = [
 		price: 3000,
 		category: 'fuentes',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_606518-MLA40996773642_032020-O.jpg',
+		stock: 0,
 	},
 	// kits //
 	{
@@ -229,8 +253,9 @@ const insumos = [
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 15000,
-		category: 'fuentes',
+		category: 'kits',
 		img: 'https://m.media-amazon.com/images/I/510SPfFMPEL.jpg',
+		stock: 22,
 	},
 ];
 
