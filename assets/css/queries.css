@@ -51,6 +51,12 @@
 	.img-store img {
 		width: 90%;
 	}
+
+	.social-navbar {
+		justify-content: center;
+		width: 300px;
+		margin: 0 auto;
+	}
 }
 
 @media (max-width: 1048px) {
