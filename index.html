@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="/assets/css/sliders.css">
     <link rel="stylesheet" href="/assets/css/cart.css">
     <link rel="stylesheet" href="/assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/queries.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
 </head>
 
 <body>
-    <div class="show-overlay"></div>
+    <div class="overlay"></div>
     <div class="page-container">
         <header class="header">
             <div class="navbar-up">
@@ -26,23 +27,73 @@
                 <i class="fa-solid fa-clock"></i>
                 <i class="fa-solid fa-phone"></i>
                 <p>CONTACTENOS</p>
-                <div class="navbarup-redes">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
             </div>
             <nav class="navbar">
-                <h1>ANCLA <span>TATTOO - INSUMOS</span></h1>
-                <i class="fa-regular fa-bars-sort"></i>
+                <h1>ANCLA <span>TATTOO</span></h1>
+                <i class="fa-sharp fa-solid fa-bars"></i>
                 <ul class="navbar-list">
-                    <li class="item-list"><a href="#">Inicio</a></li>
-                    <li class="item-list"><a href="#">Insumos</a></li>
-                    <li class="item-list"><a href="#">tatuajes</a></li>
-                    <div class="cart-navbar">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    <li><a class="item-list" href="#">Inicio</a></li>
+                    <li><a class="item-list" href="#">Insumos</a></li>
+                    <li><a class="item-list" href="#">tatuajes</a></li>
+                    <div class="social-navbar">
+
+                        <a href="https://www.facebook.com/AnclaTattooInsumos" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+
+                        <a href="https://www.instagram.com/anclatattooinsumos/" target="_blank"> <i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                 </ul>
-                <div class="cart-market"></div>
+                <div class="cart-navbar">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="cart-market">
+                    <div class="head-cart">
+                        <i class="fa-solid fa-anchor"></i>
+                        <h3>Carrito</h3>
+                        <i class="fa-solid fa-anchor"></i>
+                    </div>
+                    <div class="line-division-cart"></div>
+                    <div class="product-cart-container">
+                        <!-- 
+                        <div class="product-cart">
+                            <img class="img-cart" src="/assets/img/productos/locion-post-piercing.jpg" alt="">
+                            <div class="description-cart">
+                                <h4 class="title-product-cart">locion post piercing</h4>
+                                <div class="price-and-quantity">
+                                    <span class="price-art-cart">300$</span>
+                                    <div class="quantity">
+                                        <button class="rest-insumo">-</button>
+                                        <span class="quantity-insumo">1</span>
+                                        <button class="add-insumo">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="line-division-cart"></div>
+                    <div class="subtotal-cart-container">
+                        <div class="sub-total">
+                            <p>SUBTOTAL</p>
+                            <span>600$</span>
+                        </div>
+                        <div class="send">
+                            <p>ENVÍO</p>
+                            <span>gratis</span>
+                        </div>
+                    </div>
+                    <div class="line-division-cart"></div>
+                    <div class="total-container">
+                        <div class="total">
+                            <h3 class="total-title">TOTAL</h3>
+                            <span class="total-cart">600$</span>
+                        </div>
+                    </div>
+                    <div class="finish-buy-container">
+                        <button class="finish-buy">COMPRAR</button>
+                        <button class="delete-buy">VACIAR CARRITO</button>
+                    </div>
+                </div>
             </nav>
 
 
@@ -115,7 +166,7 @@
                     <div class="img-store">
                         <img src="/assets/img/logos/logo-ancla-vidriera.jpg" alt="">
                     </div>
-                    <div class="sponsors ">
+                    <div class="sponsors">
                         <img src="/assets/img/productos/tintas-footer.jpg" alt="">
                         <img src="/assets/img/productos/tintas-footer.jpg" alt="">
                         <img src="/assets/img/productos/tintas-footer.jpg" alt="">
@@ -153,6 +204,9 @@
             </div>
         </footer>
     </div>
+    <a href="https://wa.me/541140615955?text=Hola!%20estamos%20para%20responder%20todas%20tus%20dudas.%0A%C2%BFEn%20que%20podemos%20ayudarte?%20"
+        target="_blank"><img src="https://www.iconpacks.net/icons/1/free-whatsapp-icon-121-thumb.png" alt="whats-app"
+            class="whats-app-logo"></a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="/assets/javascript/sliderauto.js"></script>
     <script src="/assets/javascript/data.js"></script>

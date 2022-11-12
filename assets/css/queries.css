@@ -1,0 +1,84 @@
+@media (max-width: 775px) {
+	.fa-sharp {
+		visibility: visible;
+	}
+
+	.cart-navbar {
+		border-left: none;
+	}
+
+	.navbar-list {
+		position: absolute;
+		background-color: #000000;
+		top: 130px;
+		left: 0;
+		width: 300px;
+		height: calc(100vh - 130px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 50px;
+		display: none;
+	}
+
+	.navbar-up {
+		justify-content: center;
+		width: 100%;
+		margin: 0;
+		gap: 5%;
+	}
+
+	.navbar-up i {
+		padding: 0;
+		border: none;
+	}
+
+	/* hero */
+
+	.swiper {
+		height: auto;
+	}
+
+	.open-bars {
+		display: flex;
+	}
+
+	/* Ancla tatto store  */
+	.img-store {
+		display: flex;
+		justify-content: center;
+	}
+	.img-store img {
+		width: 90%;
+	}
+}
+
+@media (max-width: 1048px) {
+	/* footer */
+
+	.question-list {
+		justify-content: center;
+	}
+
+	.footer-divider {
+		margin: 0 auto;
+	}
+
+	.mark {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.dev {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 475px) {
+	.navbar-list {
+		width: 100%;
+	}
+}

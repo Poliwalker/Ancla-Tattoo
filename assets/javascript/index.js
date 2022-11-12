@@ -3,9 +3,17 @@ const listaCategorias = document.querySelectorAll('.category');
 const cardContainer = document.querySelector('.card-container');
 const btnVerMas = document.querySelector('.btn-ver-mas');
 const cartIcon = document.querySelector('.fa-cart-shopping');
+const barsIcon = document.querySelector('.fa-bars');
+const navbarList = document.querySelector('.navbar-list');
 const cartContainer = document.querySelector('.cart-market');
-// local storage //
+const cartRenderInsumos = document.querySelector('.product-cart-container');
+const overlay = document.querySelector('.overlay');
+const total = document.querySelector('.total');
+const deleteBuy = document.querySelector('.delete-buy');
+const finishBtn = document.querySelector('.finish-buy');
 
+// local storage //
+console.log(navbarList);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const SaveLocalStorage = (cartList) => {
@@ -26,7 +34,7 @@ const renderInsumo = (insumo) => {
             <p class="card-p">${description}</p>
         </div>
         <div class="card-price-add">
-            <span class="price">${price}</span>
+            <span class="price">${price}$</span>
             <button class="add-cart" data-id='${id}'
             data-name='${name}'
             data-price='${price}'
@@ -57,7 +65,7 @@ const renderInsumos = (index = 0, category = undefined) => {
 	renderizadoInsumosFiltrados(category);
 };
 
-// filtrado categorias //
+// logica filtrado - filtrado categorias//
 
 const renderdividedInsumos = (index = 0) => {
 	cardContainer.innerHTML += controlInsumos.dividedProduct[index]
@@ -70,8 +78,6 @@ const renderizadoInsumosFiltrados = (category) => {
 
 	cardContainer.innerHTML = insumosList.map(renderInsumo).join('');
 };
-
-// logica filtrado //
 
 const printBtnForCategory = (categoriaSeleccionada) => {
 	const categories = [...listaCategorias];
@@ -105,6 +111,7 @@ const funcionAplicacionFiltro = (e) => {
 		renderInsumos();
 	} else {
 		renderInsumos(0, e.target.dataset.category);
+		controlInsumos.nextProductsIndex = 1;
 	}
 };
 
@@ -119,12 +126,84 @@ const mostrarMasProductos = () => {
 	}
 };
 
+// toggle //
+
+const openNavbar = () => {
+	navbarList.classList.toggle('open-bars');
+	if (cartContainer.classList.contains('open-cart')) {
+		cartContainer.classList.remove('open-cart');
+		return;
+	}
+	overlay.classList.toggle('show-overlay');
+};
+
+const ToggleCart = () => {
+	cartContainer.classList.toggle('open-cart');
+	if (navbarList.classList.contains('open-bars')) {
+		navbarList.classList.remove('open-bars');
+		return;
+	}
+	overlay.classList.toggle('show-overlay');
+};
+
+const closeScroll = () => {
+	if (
+		!navbarList.classList.contains('open-bars') &&
+		!cartContainer.classList.contains('open-cart')
+	)
+		return;
+
+	navbarList.classList.remove('open-bars');
+	cartContainer.classList.remove('open-cart');
+	overlay.classList.remove('show-overlay');
+};
+
+const closeMenu = (e) => {
+	if (!e.target.classList.contains('item-list')) return;
+	navbarList.classList.remove('open-bars');
+	overlay.classList.remove('show-overlay');
+};
+
+const closeOverlay = () => {
+	navbarList.classList.remove('open-bars');
+	overlay.classList.remove('show-overlay');
+	cartContainer.classList.remove('open-cart');
+};
+// Carrito //
+
 // funcion iniciadora
 
 const init = () => {
 	renderInsumos();
 	categories.addEventListener('click', funcionAplicacionFiltro);
 	btnVerMas.addEventListener('click', mostrarMasProductos);
+	cartIcon.addEventListener('click', ToggleCart);
+	barsIcon.addEventListener('click', openNavbar);
+	window.addEventListener('scroll', closeScroll);
+	navbarList.addEventListener('click', closeMenu);
+	overlay.addEventListener('click', closeOverlay);
+	// cardContainer.addEventListener('click', addInsumoCart);
+	// cartRenderInsumos.addEventListener('click', handleQuantity);
 };
 
 init();
+
+renderInsumoCart = (insumo) => {
+	const { img, name, price, quantity, id } = insumo;
+	return `
+	<div class="product-cart">
+	<img class="img-cart" src="${img}" alt="${name}">
+	<div class="description-cart">
+		<h4 class="title-product-cart">${name}</h4>
+		<div class="price-and-quantity">
+			<span class="price-art-cart">${price}</span>
+			<div class="quantity">
+				<button class="sustract-and-rest up">${id}</button>
+				<span class="quantity-insumo">${quantity}</span>
+				<button class="sustract-and-rest">${id}</button>
+			</div>
+		</div>
+	</div>
+
+	`;
+};
