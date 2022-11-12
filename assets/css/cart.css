@@ -102,7 +102,7 @@
 /* overlay */
 
 .overlay {
-	position: absolute;
+	position: fixed;
 	top: 130px;
 	left: 0;
 	height: 100vh;

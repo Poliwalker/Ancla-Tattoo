@@ -23,6 +23,7 @@ body {
 	color: var(--text-principal);
 	background-color: var(--fondo);
 	width: 100%;
+	position: relative;
 }
 
 .main {
@@ -126,7 +127,6 @@ body {
 .titles-category h3 {
 	font-size: 30px;
 	text-align: center;
-	min-width: 500px;
 }
 
 .line-divider {
@@ -215,7 +215,6 @@ body {
 .whats-app-logo {
 	width: 60px;
 	position: fixed;
-	bottom: 3%;
-	right: 1.5%;
-	color: green;
+	right: 8px;
+	bottom: 8px;
 }
