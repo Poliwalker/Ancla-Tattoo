@@ -8,16 +8,17 @@ const navbarList = document.querySelector('.navbar-list');
 const cartContainer = document.querySelector('.cart-market');
 const cartRenderInsumos = document.querySelector('.product-cart-container');
 const overlay = document.querySelector('.overlay');
-const total = document.querySelector('.total');
+const total = document.querySelector('.total-cart');
 const deleteBuy = document.querySelector('.delete-buy');
 const finishBtn = document.querySelector('.finish-buy');
+const modal = document.querySelector('.modal');
 
 // local storage //
 console.log(navbarList);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const SaveLocalStorage = (cartList) => {
-	localStorage.setItem(cart, JSON.stringify(cartList));
+	localStorage.setItem('cart', JSON.stringify(cartList));
 };
 
 // renderizado de los productos al contenedor de productos //
@@ -40,7 +41,7 @@ const renderInsumo = (insumo) => {
             data-price='${price}'
             data-img='${img}'
             data-category='${category}'
-            >Agregar a Carrito</button>
+            >Agregar</button>
         </div>
     </div>
     `;
@@ -171,6 +172,173 @@ const closeOverlay = () => {
 };
 // Carrito //
 
+const renderInsumoCart = (insumo) => {
+	const { img, name, price, quantity, id } = insumo;
+	return `
+	
+	<div class="insumo-cart">
+	<div class="description-cart">
+	<img class="img-cart" src="${img}" alt="${name}">
+	<div class="description">
+	<h4 class="title-product-cart">${name}</h4>
+		<div class="price-and-quantity">
+			<span class="price-art-cart">${price}</span>
+			<div class="quantity">
+				<button class="sustract-and-rest down" data-id='${id}'>-</button>
+				<span class="quantity-insumo">${quantity}</span>
+				<button class="sustract-and-rest up" data-id='${id}'>+</button>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	`;
+};
+
+const addInsumoCart = () => {
+	if (!cart.length) {
+		cartRenderInsumos.innerHTML = `<p class="empty">No hay insumos cargados al carrito</p>`;
+		return;
+	}
+	cartRenderInsumos.innerHTML = cart.map(renderInsumoCart).join('');
+};
+
+const cartTotal = () => {
+	return cart.reduce((acc, cur) => acc + Number(cur.price) * cur.quantity, 0);
+};
+
+const showTotal = () => {
+	total.innerHTML = `${cartTotal().toFixed(2)} $`;
+};
+
+const disableButtons = (btn) => {
+	if (!cart.length) {
+		btn.classList.add('disabled');
+	} else {
+		btn.classList.remove('disabled');
+	}
+};
+
+const createInsumoData = (id, name, price, img) => {
+	return { id, name, price, img };
+};
+
+const existingInsumoCart = (insumo) => {
+	return cart.find((item) => item.id === insumo.id);
+};
+
+const addUnitToInsumo = (insumo) => {
+	cart = cart.map((cartInsumo) => {
+		return cartInsumo.id === insumo.id
+			? { ...cartInsumo, quantity: cartInsumo.quantity + 1 }
+			: cartInsumo;
+	});
+};
+
+const createCartInsumo = (insumo) => {
+	cart = [...cart, { ...insumo, quantity: 1 }];
+};
+
+const showModal = (msg) => {
+	modal.classList.add('active-modal');
+	modal.textContent = msg;
+	setTimeout(() => {
+		modal.classList.remove('active-modal');
+	}, 2000);
+};
+
+const checkCartState = () => {
+	SaveLocalStorage(cart);
+	addInsumoCart(cart);
+	showTotal(cart);
+	disableButtons(deleteBuy);
+	disableButtons(finishBtn);
+};
+
+const addInsumo = (e) => {
+	if (!e.target.classList.contains('add-cart')) return;
+	const { id, name, price, img } = e.target.dataset;
+	const insumo = createInsumoData(id, name, price, img);
+
+	if (existingInsumoCart(insumo)) {
+		addUnitToInsumo(insumo);
+		showModal('SE AÑADIO UN PRODUCTO AL CARRITO');
+	} else {
+		createCartInsumo(insumo);
+		showModal('Se agrego un producto al carrito');
+	}
+	checkCartState();
+};
+
+// añadir y sacar productos desde el carrito //
+
+const removeInsumoFromCart = (existingInsumo) => {
+	cart = cart.filter((insumo) => insumo.id !== existingInsumo.id);
+	checkCartState();
+};
+
+const removeInsumoUnit = (existingInsumo) => {
+	cart = cart.map((insumo) => {
+		return insumo.id === existingInsumo.id
+			? { ...insumo, quantity: Number(insumo.quantity - 1) }
+			: insumo;
+	});
+};
+
+const restInsumoBtn = (id) => {
+	const existingCartInsumo = cart.find((item) => item.id === id);
+	if (existingCartInsumo.quantity === 1) {
+		if (window.confirm('desea eliminar el insumo del carrito')) {
+			removeInsumoFromCart(existingCartInsumo);
+		}
+		return;
+	}
+	removeInsumoUnit(existingCartInsumo);
+};
+
+const addPlusBtnEvent = (id) => {
+	const existingCartInsumo = cart.find((item) => item.id === id);
+	addUnitToInsumo(existingCartInsumo);
+};
+
+const handleQuantity = (e) => {
+	if (e.target.classList.contains('down')) {
+		restInsumoBtn(e.target.dataset.id);
+	} else if (e.target.classList.contains('up')) {
+		addPlusBtnEvent(e.target.dataset.id);
+	}
+
+	checkCartState();
+};
+
+const resetCart = () => {
+	cart = [];
+	checkCartState();
+};
+
+const completeAction = (acceptMsg, sucessMsg) => {
+	if (!cart.length) return;
+	if (window.confirm(acceptMsg)) {
+		resetCart();
+		alert(sucessMsg);
+	}
+};
+
+const completeBuy = () => {
+	completeAction(
+		'¿Desea finalizar su compra?',
+		'Gracias por su compra, el Ancla Tatto los ama'
+	);
+};
+
+const deleteCart = () => {
+	completeAction(
+		'¿Desea vaciar el carrito?',
+		'Ya no hay productos en el carrito'
+	);
+};
+
 // funcion iniciadora
 
 const init = () => {
@@ -182,28 +350,14 @@ const init = () => {
 	window.addEventListener('scroll', closeScroll);
 	navbarList.addEventListener('click', closeMenu);
 	overlay.addEventListener('click', closeOverlay);
-	// cardContainer.addEventListener('click', addInsumoCart);
-	// cartRenderInsumos.addEventListener('click', handleQuantity);
+	document.addEventListener('DOMContentLoaded', addInsumoCart);
+	document.addEventListener('DOMContentLoaded', showTotal);
+	cartRenderInsumos.addEventListener('click', handleQuantity);
+	disableButtons(deleteBuy);
+	disableButtons(finishBtn);
+	cardContainer.addEventListener('click', addInsumo);
+	finishBtn.addEventListener('click', completeBuy);
+	deleteBuy.addEventListener('click', deleteCart);
 };
 
 init();
-
-renderInsumoCart = (insumo) => {
-	const { img, name, price, quantity, id } = insumo;
-	return `
-	<div class="product-cart">
-	<img class="img-cart" src="${img}" alt="${name}">
-	<div class="description-cart">
-		<h4 class="title-product-cart">${name}</h4>
-		<div class="price-and-quantity">
-			<span class="price-art-cart">${price}</span>
-			<div class="quantity">
-				<button class="sustract-and-rest up">${id}</button>
-				<span class="quantity-insumo">${quantity}</span>
-				<button class="sustract-and-rest">${id}</button>
-			</div>
-		</div>
-	</div>
-
-	`;
-};

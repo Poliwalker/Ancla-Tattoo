@@ -11,7 +11,7 @@
 :root {
 	--navbar-up: #b4b4b4;
 	--navbar-down: #ffffff;
-	--text-principal: #000000;
+	--text-principal: #6f6f6f;
 	--navbar-down-text: rgb(134, 134, 134);
 }
 
@@ -55,6 +55,7 @@ body {
 	padding: 0 15px;
 	margin: 0 16px;
 	background-color: var(--navbar-up);
+	color: #131415;
 }
 
 .navbar-up i {
