@@ -1,0 +1,69 @@
+.main-register {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.form-register {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form-register h2 {
+	padding: 2rem 1rem 2rem;
+	max-width: 350px;
+	text-align: center;
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.form-user,
+.form-email,
+.form-pass,
+.form-tel {
+	display: flex;
+	flex-direction: column;
+}
+
+#user,
+#password,
+#email,
+#tel {
+	height: 30px;
+	padding: 10px 10px;
+	border-radius: 10px;
+	border: 1px solid grey;
+	outline: none;
+	width: 300px;
+}
+
+#user:focus,
+#password:focus,
+#email:focus,
+#tel:focus {
+	border-bottom: 1px solid grey;
+}
+
+.form-check {
+	display: flex;
+	gap: 10px;
+}
+
+.btn-register {
+	padding: 0.2rem 6rem;
+	margin-top: 10px;
+	background-color: #4747ff;
+	color: aliceblue;
+	font-weight: 700;
+	font-family: 'poppins';
+	border-radius: 10px;
+	cursor: pointer;
+}

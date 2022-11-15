@@ -263,10 +263,10 @@ const addInsumo = (e) => {
 
 	if (existingInsumoCart(insumo)) {
 		addUnitToInsumo(insumo);
-		showModal('SE AÑADIO UN PRODUCTO AL CARRITO');
+		showModal('Se añadió un producto existente al carrito');
 	} else {
 		createCartInsumo(insumo);
-		showModal('Se agrego un producto al carrito');
+		showModal('Se agrego un nuevo producto al carrito');
 	}
 	checkCartState();
 };
