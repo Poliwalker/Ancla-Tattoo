@@ -12,6 +12,7 @@
 	border-radius: 10px;
 	background-color: rgb(246, 246, 246);
 	font-family: 'Poppins';
+	transition: 0.2s all ease-in-out;
 }
 
 .card-container {
@@ -67,25 +68,36 @@
 	border: 1px solid #17adc6;
 	cursor: pointer;
 	font-family: 'Poppins';
+	transition: 0.5s all ease-in-out;
 }
 
 .add-cart:hover {
 	background-color: #17adc6;
 	color: rgb(251, 251, 251);
+	transition: 0.5s all ease-in-out;
 }
 
 .btn-ver-mas {
-	width: 300px;
+	padding: 10px 35px;
+	color: rgb(36, 36, 36);
 	height: 50px;
-	background-color: #17adc6;
 	border-radius: 10px;
 	cursor: pointer;
+	font-weight: 600;
+	font-size: 20px;
+	transition: 0.5s all ease-in-out;
 }
 
+.btn-ver-mas:hover {
+	background: #17adc6;
+	color: aliceblue;
+	transition: 0.2s all ease-in-out;
+}
 .hidden {
 	visibility: hidden;
 }
 
 .activo {
 	background-color: #17adc6;
+	transition: 0.2s all ease-in-out;
 }

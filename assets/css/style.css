@@ -75,6 +75,10 @@ body {
 	background: var(--navbar-down);
 }
 
+.navbar > h1 > span {
+	color: #131415;
+}
+
 .navbar h1 {
 	font-weight: 100;
 	font-family: 'Poppins';
@@ -107,6 +111,10 @@ body {
 	padding: 0 10px;
 	border-left: 1px solid var(--navbar-up);
 	cursor: pointer;
+}
+
+.cart-navbar i {
+	color: #131415;
 }
 
 .fa-sharp {
