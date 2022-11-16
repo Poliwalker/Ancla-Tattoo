@@ -1,11 +1,20 @@
 .main-login {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 1rem 1rem;
+	padding: 4rem 1rem;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	font-family: 'poppins';
+}
+
+.img-login {
+	display: flex;
+	align-items: center;
+}
+
+.img-login img {
+	width: 320px;
 }
 
 .form-container {
