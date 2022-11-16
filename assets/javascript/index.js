@@ -24,7 +24,7 @@ const SaveLocalStorage = (cartList) => {
 // renderizado de los productos al contenedor de productos //
 
 const renderInsumo = (insumo) => {
-	const { id, name, description, price, category, img } = insumo;
+	const { id, name, price, category, img } = insumo;
 	return `
     <div class="card">
         <div class="card-img">
@@ -32,7 +32,7 @@ const renderInsumo = (insumo) => {
         </div>
         <div class="card-data">
             <h3 class="card-title">${name}</h3>
-            <p class="card-p">${description}</p>
+            <p class="card-p">${category}</p>
         </div>
         <div class="card-price-add">
             <span class="price">${price}$</span>

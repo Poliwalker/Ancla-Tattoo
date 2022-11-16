@@ -3,8 +3,6 @@ const insumos = [
 	{
 		id: 1,
 		name: 'agujas n°1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
@@ -12,9 +10,7 @@ const insumos = [
 	},
 	{
 		id: 2,
-		name: 'agujas n°1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'agujas n°2',
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
@@ -22,9 +18,7 @@ const insumos = [
 	},
 	{
 		id: 3,
-		name: 'agujas n°1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'agujas n°3',
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
@@ -32,9 +26,7 @@ const insumos = [
 	},
 	{
 		id: 4,
-		name: 'agujas n°1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'agujas n°4',
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
@@ -42,9 +34,7 @@ const insumos = [
 	},
 	{
 		id: 5,
-		name: 'agujas n°1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'agujas n°5',
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
@@ -52,9 +42,7 @@ const insumos = [
 	},
 	{
 		id: 6,
-		name: 'agujas n°1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'agujas n°6',
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
@@ -62,9 +50,7 @@ const insumos = [
 	},
 	{
 		id: 7,
-		name: 'agujas n°1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'agujas n°7',
 		price: 3000,
 		category: 'agujas',
 		img: 'https://image.made-in-china.com/155f0j00haUfoGwsASkm/Hot-Selling-Disposable-Tattoo-Supplies-Tattoo-Needle.jpg',
@@ -74,8 +60,6 @@ const insumos = [
 	{
 		id: 8,
 		name: 'maquina inalambrica',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://aprenderatatuar.b-cdn.net/wp-content/uploads/2021/05/Solong-Maquina-tatuar-inalambrica-1001x1024.jpg',
@@ -83,9 +67,7 @@ const insumos = [
 	},
 	{
 		id: 9,
-		name: 'maquina x',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'maquina clasica',
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://ae01.alicdn.com/kf/HTB1RhsqMXXXXXXlXXXXq6xXFXXXX/Rotario-sigilo-m-quina-de-tatuaje-de-aluminio-giratorio-potente-y-constante-para-sombreador-y-delineador.jpg',
@@ -93,9 +75,7 @@ const insumos = [
 	},
 	{
 		id: 10,
-		name: 'thunder',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'thunder machine',
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://cosasdetattoos.com/wp-content/uploads/2019/07/cheyenne-thunder.jpg',
@@ -104,8 +84,6 @@ const insumos = [
 	{
 		id: 11,
 		name: 'maquina black',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 3000,
 		category: 'maquinas',
 		img: 'https://images.squarespace-cdn.com/content/v1/5e2db6ff90968a1bd350e49e/1628200166744-3P84Y315SGZXOA2WHF7D/Untitled.png',
@@ -114,9 +92,7 @@ const insumos = [
 	// pigmentos //
 	{
 		id: 12,
-		name: 'maquina inalambrica',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'pigmentos negros',
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_692217-MLA49655483652_042022-O.jpg',
@@ -124,9 +100,7 @@ const insumos = [
 	},
 	{
 		id: 13,
-		name: 'maquina x',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'colores fluo',
 		price: 3000,
 		category: 'colores',
 		img: 'https://i0.wp.com/nubo.com.ve/icemanink/wp-content/uploads/sites/4/2019/04/tintas-uv.jpg',
@@ -134,9 +108,7 @@ const insumos = [
 	},
 	{
 		id: 14,
-		name: 'maquna y ',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'pigmentos',
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
@@ -144,9 +116,7 @@ const insumos = [
 	},
 	{
 		id: 15,
-		name: 'maquina xx',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'set pigmentos',
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
@@ -154,9 +124,7 @@ const insumos = [
 	},
 	{
 		id: 16,
-		name: 'maquina inalambrica',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'pigmentos',
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
@@ -164,9 +132,7 @@ const insumos = [
 	},
 	{
 		id: 17,
-		name: 'maquina x',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'pigmentos',
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
@@ -174,9 +140,7 @@ const insumos = [
 	},
 	{
 		id: 18,
-		name: 'maquna y ',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'pigmentos',
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
@@ -184,9 +148,7 @@ const insumos = [
 	},
 	{
 		id: 19,
-		name: 'maquina xx',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'pigmentos',
 		price: 3000,
 		category: 'colores',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_804760-MLA51602454543_092022-O.jpg',
@@ -197,8 +159,6 @@ const insumos = [
 	{
 		id: 20,
 		name: 'Crema post tatuaje',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 3000,
 		category: 'higiene',
 		img: 'https://halconsupplies.com.ar/wp-content/uploads/2021/08/Crema-post-tattoo-black-lion.jpg',
@@ -206,9 +166,7 @@ const insumos = [
 	},
 	{
 		id: 21,
-		name: 'Loción post piercing',
-		description:
-			'Esta locion está especificada para hacer una curacion, la cual dura alrededor de una semana, para su piercing recien colocado',
+		name: 'locion post piercing',
 		price: 3000,
 		category: 'higiene',
 		img: '/assets/img/productos/locion-post-piercing.jpg',
@@ -219,8 +177,6 @@ const insumos = [
 	{
 		id: 22,
 		name: 'Fuente Hurricane',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 3000,
 		category: 'fuentes',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_606518-MLA40996773642_032020-O.jpg',
@@ -229,8 +185,6 @@ const insumos = [
 	{
 		id: 23,
 		name: 'Fuente Hurricane',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 3000,
 		category: 'fuentes',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_606518-MLA40996773642_032020-O.jpg',
@@ -239,8 +193,6 @@ const insumos = [
 	{
 		id: 24,
 		name: 'Fuente Hurricane',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
 		price: 3000,
 		category: 'fuentes',
 		img: 'https://http2.mlstatic.com/D_NQ_NP_606518-MLA40996773642_032020-O.jpg',
@@ -249,9 +201,7 @@ const insumos = [
 	// kits //
 	{
 		id: 26,
-		name: 'maquina xx',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed repellat provident animi at nostrum fugit tempora culpa et non illum unde quibusdam',
+		name: 'Kit tatuador',
 		price: 15000,
 		category: 'kits',
 		img: 'https://m.media-amazon.com/images/I/510SPfFMPEL.jpg',
