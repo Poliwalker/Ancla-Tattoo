@@ -44,7 +44,7 @@
 
 #user,
 #password {
-	height: 30px;
+	height: 35px;
 	padding: 10px 10px;
 	border-radius: 10px;
 	border: 1px solid grey;
@@ -59,7 +59,7 @@
 .btn-login {
 	padding: 0.2rem 6rem;
 	margin-top: 10px;
-	background-color: #4747ff;
+	background-color: #17adc6;
 	color: aliceblue;
 	font-weight: 700;
 	font-family: 'poppins';

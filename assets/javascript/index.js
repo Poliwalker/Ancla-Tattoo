@@ -14,7 +14,6 @@ const finishBtn = document.querySelector('.finish-buy');
 const modal = document.querySelector('.modal');
 
 // local storage //
-console.log(navbarList);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const SaveLocalStorage = (cartList) => {
@@ -24,7 +23,7 @@ const SaveLocalStorage = (cartList) => {
 // renderizado de los productos al contenedor de productos //
 
 const renderInsumo = (insumo) => {
-	const { id, name, price, category, img } = insumo;
+	const { id, name, price, category, img, stock } = insumo;
 	return `
     <div class="card">
         <div class="card-img">
@@ -41,22 +40,19 @@ const renderInsumo = (insumo) => {
             data-price='${price}'
             data-img='${img}'
             data-category='${category}'
+			data-stock='${stock}'
             >Agregar</button>
         </div>
     </div>
     `;
 };
 
-const renderError = () => {
-	return `La categoria seleccionada se encuentra sin stock`;
-};
-
-const sinStock = () => {
-	if (insumos.filter((insumo) => insumo.stock === 0)) {
-		cardContainer.innerHTML = renderError();
-		return;
-	}
-};
+// const sinStock = (e) => {
+// 	const stock = e.target.dataset.stock;
+// 	if (stock === 0) {
+// 		cardContainer.innerHTML = `No hay stock de la categoria seleccionada`;
+// 	}
+// };
 
 const renderInsumos = (index = 0, category = undefined) => {
 	if (!category) {
@@ -245,7 +241,7 @@ const showModal = (msg) => {
 	modal.textContent = msg;
 	setTimeout(() => {
 		modal.classList.remove('active-modal');
-	}, 2000);
+	}, 3000);
 };
 
 const checkCartState = () => {
@@ -328,7 +324,7 @@ const completeAction = (acceptMsg, sucessMsg) => {
 const completeBuy = () => {
 	completeAction(
 		'¿Desea finalizar su compra?',
-		'Gracias por su compra, el Ancla Tatto los ama'
+		'Gracias por su compra, el Ancla Tattoo los ama'
 	);
 };
 

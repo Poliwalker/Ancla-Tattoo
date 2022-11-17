@@ -10,22 +10,22 @@ const overlay = document.querySelector('.overlay');
 
 // chequeos //
 
-const CheckUser = () => {
+const checkUser = () => {
 	let valid = false;
 	const min = 4;
 	const max = 20;
 
-	const username = userInput.value.trim();
+	const userValue = userInput.value.trim();
 
-	if (!isEmpty(username)) {
+	if (!isEmpty(userValue)) {
 		showError(userInput, 'El usuario es obligatorio');
-	} else if (!between(userInput.length, min, max)) {
+	} else if (!isBetween(userValue.length, min, max)) {
 		showError(
 			userInput,
 			`El nombre debe tener entre ${min} y ${max} caracteres`
 		);
 	} else {
-		showSucces(userInput);
+		showSuccess(userInput);
 		valid = true;
 	}
 	return valid;
@@ -40,7 +40,7 @@ const checkemail = () => {
 	} else if (!isEmailValid(emailValue)) {
 		showError(emailInput, 'el email no es valido');
 	} else {
-		showSucces(emailInput);
+		showSuccess(emailInput);
 		valid = true;
 	}
 	return valid;
@@ -55,7 +55,7 @@ const checkPass = () => {
 	} else if (!isPassSecure(passValue)) {
 		showError(passInput, 'La contraseña no cumple con los requisitos');
 	} else {
-		showSucces(passInput);
+		showSuccess(passInput);
 		valid = true;
 	}
 	return valid;
@@ -70,7 +70,7 @@ const checkTel = () => {
 	} else if (!isPhoneValid(telValue)) {
 		showError(telInput, 'El telefono ingresado no es valido');
 	} else {
-		showSucces(telInput);
+		showSuccess(telInput);
 		valid = true;
 	}
 	return valid;
@@ -94,6 +94,12 @@ const isPhoneValid = (phone) => {
 	return re.test(phone);
 };
 
+//Funcion que verifica un input si está vacío o no //
+const isEmpty = (value) => (value === '' ? false : true);
+//Funcion que verifica el min y el max //
+const isBetween = (length, min, max) =>
+	length < min || length > max ? false : true;
+
 //Mostrar error y Success //
 
 const showError = (input, message) => {
@@ -104,19 +110,12 @@ const showError = (input, message) => {
 	error.textContent = message;
 };
 
-const showSucces = (input) => {
+const showSuccess = (input) => {
 	const formField = input.parentElement;
 	formField.classList.remove('error');
 	formField.classList.add('success');
 	const error = formField.querySelector('p');
 	error.textContent = '';
-};
-
-//Funcion que verifica un input si está vacío o no //
-const isEmpty = (value) => (value === '' ? false : true);
-//Funcion que verifica el min y el max //
-const between = (length, min, max) => {
-	length < min || length > max ? false : true;
 };
 
 //Toggle Menu //
@@ -140,7 +139,7 @@ const init = () => {
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 
-		let isUserValid = CheckUser();
+		let isUserValid = checkUser();
 		let isEmailValid = checkemail();
 		let isPassSecure = checkPass();
 		let isPhoneValid = checkTel();

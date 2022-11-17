@@ -33,6 +33,10 @@
 		border: none;
 	}
 
+	.social-navbar i {
+		color: var(--navbar-down);
+	}
+
 	/* hero */
 
 	.swiper {
@@ -59,7 +63,7 @@
 	}
 }
 
-@media (max-width: 1048px) {
+@media (max-width: 1056px) {
 	/* footer */
 
 	.question-list {
@@ -86,6 +90,17 @@
 @media (max-width: 475px) {
 	.navbar-list {
 		width: 100%;
+	}
+
+	#form {
+		align-items: center;
+		width: 100%;
+	}
+
+	.form-check {
+		flex-direction: column-reverse;
+		max-width: 300px;
+		text-align: center;
 	}
 }
 
