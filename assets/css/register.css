@@ -87,3 +87,9 @@ input[type='checkbox'] {
 	color: #ff2020;
 	font-size: 18px;
 }
+
+@media (max-width: 376px) {
+	.btn-register {
+		padding: 0.2rem 4rem;
+	}
+}

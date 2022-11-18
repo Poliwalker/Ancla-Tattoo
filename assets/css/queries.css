@@ -97,10 +97,13 @@
 		width: 100%;
 	}
 
-	.form-check {
-		flex-direction: column-reverse;
-		max-width: 300px;
-		text-align: center;
+	.form-check p {
+		max-width: 250px;
+	}
+
+	.success,
+	.error {
+		font-size: 14px;
 	}
 }
 
@@ -121,9 +124,9 @@
 	}
 }
 
-@media (max-width) {
-	.cart-market {
-		width: 100%;
-		min-width: none;
+@media (max-width: 376px) {
+	.btn-register,
+	.btn-login {
+		padding: 0.2rem 4rem;
 	}
 }
